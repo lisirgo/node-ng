@@ -1,6 +1,9 @@
 const http = require('http');
 const server = http.createServer((request,response)=>{
-    response.write('hello~~');
+    response.writeHead(200,{
+        'Content-Type':'text/html'
+    })
+    response.write('<input />');
     response.end();
 })
 
